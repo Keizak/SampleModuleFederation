@@ -105,18 +105,18 @@ return overrideConfig(config)
 # <span style="border-bottom:3px solid green"> 4. Create structure in src  </span>
 
 - Create index.ts with this code</br>
-  <code>
-  // This import syntax is required for use with Webpack 5 Module Federation when we use exposes module</br>
+<code>
+// This import syntax is required for use with Webpack 5 Module Federation when we use exposes module</br>
   // @ts-ignore</br>
   void import('./index.tsx')
-  </code>
+</code>
 
 - Create folders for modules. In our case, src/modules/export</br>
 - Exports files (In export, we do a normal export)</br>
-  <code>
-  const ExportModule = props => <App {...props}/> </br>
-  export default ExportModule
-  </code>
+<code>
+const ExportModule = props => <App {...props}/> </br>
+export default ExportModule
+</code>
 
 Import files (In the import we make a request for the module and then we do its processing or no)
 <code>
@@ -138,6 +138,6 @@ export const ImportedModule = props => RemoteFactory(<ImportedModuleLazy {...pro
 
 # <span style="border-bottom:3px solid green"> 5. Add Add script loading in html  </span>
 - add in public/index.html script . Microfront source file path, see rescripts</br>
-  <code>
-  // \<*script src="http://localhost:3001/remoteEntry.js"></script>*
-  </code>
+<code>
+// \<*script src="http://localhost:3001/remoteEntry.js"></script>*
+</code>
